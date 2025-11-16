@@ -10,7 +10,7 @@ export default defineConfig({
   ],
   
   // Use a ternary to ensure dev server ALWAYS runs at the root.
-  base: process.env.NODE_ENV === 'production' ? '/pgkill-auslieferung/' : '/',
+  base: process.env.NODE_ENV === 'production' ? '/pgkill-auslieferung-v2/' : '/',
   
   server: {
     // These headers are still required.
