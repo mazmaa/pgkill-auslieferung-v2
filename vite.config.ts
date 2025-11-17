@@ -11,20 +11,20 @@ export default defineConfig({
   
   // Use a ternary to ensure dev server ALWAYS runs at the root.
   base: process.env.NODE_ENV === 'production' ? '/pgkill-auslieferung-v2/' : '/',
-  
+
+  // ADD THIS SECTION to enable cross-origin isolation for the dev server
   server: {
-    // These headers are still required.
     headers: {
-      'Cross-Origin-Embedder-Policy': 'require-corp',
       'Cross-Origin-Opener-Policy': 'same-origin',
+      'Cross-Origin-Embedder-Policy': 'require-corp',
     },
   },
 
-  // Leave the rest as is
+  // ADD THIS SECTION to enable it for the preview server (for testing the build)
   preview: {
     headers: {
-      'Cross-Origin-Embedder-Policy': 'require-corp',
       'Cross-Origin-Opener-Policy': 'same-origin',
+      'Cross-Origin-Embedder-Policy': 'require-corp',
     },
   },
   assetsInclude: ["**/*.onnx"],
