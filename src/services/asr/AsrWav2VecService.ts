@@ -3,8 +3,8 @@ import { AudioFormats } from "../../enums";
 import type { InputResult } from "../input/InputServiceBase";
 import WebWorkerWrapper from "../WebWorkerWrapper";
 
-// FIX #1: The model URL should not have '/public'
-import modelURL from '/wav2vec2-base-960h_dynamic.onnx?url';
+// FIX #1: The model URL is now hosted on Hugging Face
+const modelURL = 'https://huggingface.co/m7mdazm3x/wav2vec2-base-960h/resolve/main/wav2vec2-base-960h_dynamic.onnx';
 
 
 class AsrWav2VecService extends AsrServiceBase implements AsrService {
